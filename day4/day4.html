@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <Label>Name</Label>
+    <input id="i1" type="text" placeholder="Enter name">
+    <p id="p2">2</p>
+    <label>Choose color
+    </label>
+    <input id="i2" type="color" placeholder="choose color">
+    <p id="p3">3</p>
+    <label>Type text</label>
+    <input id="i4" type="text" placeholder="type text">
+    <p id="p4">4</p>
+    <script>
+    document.getElementById("i1").onfocus = function(){
+        document.getElementById("p2").innerHTML ="input field is focused";
+    }
+    document.getElementById("i2").onblur = function(){
+        document.getElementById("p3").innerHTML ="color choosed";
+    }
+    document.getElementById("i4").onkeyup = function(){
+        document.getElementById("p4").innerHTML ="you typed:";
+    }
+    let button = document.createElement("button");
+    button.innerText="click me";
+    button.id="b1";
+    document.body.appendChild(button);
+
+    let para = document.createElement("p");
+    para.innerText="insert";
+    para.id="p1";
+    document.body.appendChild(para);
+    document.getElementById("b1").onclick = function(){
+            document.getElementById("p1").innerHTML ="<b>ABESEC</b>";
+
+    }
+
+    </script>
+</body>
+</html>
